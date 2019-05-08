@@ -66,15 +66,5 @@ alias search=search
 
 git=hub
 
-# Git branch in prompt.
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-
-export PS1="@\[\033[33;1m\]\w\[\033[m\]:\[\033[36m\]\$(parse_git_branch)\[\033[m\]$ "
-
-parse_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 export PATH="~/dev/10k-cli/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
